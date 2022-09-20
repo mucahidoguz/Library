@@ -1,0 +1,75 @@
+* {
+  margin: 3px 2px;
+}
+
+.navbar {
+  background-image: url(./assets/book3.jpg);
+  height: 130px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.navbar-brand {
+  font-family: 'Alfa Slab One', cursive;
+  color: red;
+  font-size: xx-large;
+  font: bold;
+  font-size: 50px;
+}
+
+.homeNavbar {
+  font: bold;
+  font-size: x-large;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.btn {
+  color: white;
+}
+
+.Loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25%;
+}
+
+.Loading {
+width: 50px;
+height: 50px;
+}
+
+#Loading {
+padding-left: 15px;
+}
+
+h3 {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+}
+
+footer {
+  background-image: url(./assets/book1.jpg);
+  height: 130px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid black;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterSignature{
+margin-top: 15px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.name{
+  margin-left: 35px;
+}

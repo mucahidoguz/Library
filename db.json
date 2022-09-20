@@ -1,0 +1,61 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Yaban",
+      "author": "Yakup Kadri KARAOSMANOĞLU",
+      "isbn": "11111111111",
+      "categoryId": "1"
+    },
+    {
+      "id": 2,
+      "name": "Sefiller",
+      "author": "Victor HUGO",
+      "isbn": "11111111112",
+      "categoryId": "1"
+    },
+    {
+      "id": 2,
+      "name": "Denemeler",
+      "author": "Montaigne",
+      "isbn": "11111111113",
+      "categoryId": "3"
+    },
+    {
+      "id": 1663337198032,
+      "name": "Safahat",
+      "author": "M.Akif ERSOY",
+      "isbn": "12121",
+      "categoryId": "5"
+    },
+    {
+      "id": 1663337258392,
+      "name": "Kur'an-ı Kerim",
+      "author": "Hayrat Neşriyat",
+      "isbn": null,
+      "categoryId": "4"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Roman"
+    },
+    {
+      "id": "2",
+      "name": "Hikaye"
+    },
+    {
+      "id": "3",
+      "name": "Deneme"
+    },
+    {
+      "id": "4",
+      "name": "Dini Kitaplar"
+    },
+    {
+      "id": "5",
+      "name": "Şiir"
+    }
+  ]
+}
