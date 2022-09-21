@@ -22,7 +22,7 @@ Kitap Ekleme
 Ana Sayfa
 gibi sayfalar oluşturularak projeye entegre edilmiştir.
 
-CSS olarak hem BOOSTRAP hem de harici bir CSS STYLE dosyası kullanılmıştır.
+CSS olarak BOOSTRAP kütüphanesi kullanımıştır. Ayrıca bazı bölümler için de harici bir CSS STYLE dosyası kullanılmıştır.
 
 AXIOS Kütüphanesi kullanılmıştır.
 

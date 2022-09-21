@@ -4,7 +4,7 @@ import "./pages/Home";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddBook from "./pages/AddBook";
-import axios from "axios";
+import EditBook from "./pages/EditBook";
 
 function App() {
   return (
@@ -12,6 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add-book" element={<AddBook />} />
+        /URL ile yanına parametre ekleme. Edit sayfasına gidip kitabın ID sini
+        eklesin. "/" kullanılarak birden fazla parametre verilebilir/
+        <Route path="/edit-book/:bookId" element={<EditBook />} />
       </Routes>
     </BrowserRouter>
   );

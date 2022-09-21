@@ -2,6 +2,11 @@
   margin: 3px 2px;
 }
 
+.container {
+  height: 590px;
+
+}
+
 .navbar {
   background-image: url(./assets/book3.jpg);
   height: 130px;
@@ -30,6 +35,13 @@
   color: white;
 }
 
+#tableScroll{
+max-height: 580px;
+overflow-y: auto;
+border: 2px solid;
+border-radius: 5px;
+}
+
 .Loader {
   display: flex;
   justify-content: center;
@@ -38,18 +50,18 @@
 }
 
 .Loading {
-width: 50px;
-height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 #Loading {
-padding-left: 15px;
+  padding-left: 15px;
 }
 
 h3 {
-margin-top: 20px;
-display: flex;
-justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -64,12 +76,17 @@ footer {
   flex-direction: column;
 }
 
-.FooterSignature{
-margin-top: 15px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.FooterSignature {
+  margin-top: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
-.name{
+#saveDelete {
+  width: 200px;
+
+}
+
+.name {
   margin-left: 35px;
 }

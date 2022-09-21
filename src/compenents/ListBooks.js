@@ -41,66 +41,72 @@ const ListBooks = (props) => {
   }
 
   return (
-    <div className="container my-5">
-      <div className="my-3 d-flex justify-content-end">
+    <div className="container mb-5">
+      <div className="my-2 d-flex justify-content-end">
         <Link to="/add-book" className="btn btn-primary">
           {" "}
           Kitap Ekle
         </Link>
       </div>
+      <div id="tableScroll" >
+        <table className="table table-striped">
+          <thead>
+            <tr className="table-success text-center">
+              <th scope="col">KİTAP ADI</th>
+              <th scope="col">YAZARI</th>
+              <th scope="col">KATEGORİSİ</th>
+              <th scope="col">ISBN</th>
+              <th className="text-center" scope="col">
+                İŞLEM
+              </th>
+            </tr>
+          </thead>
 
-      <table className="table">
-        <thead>
-          <tr className="table-success text-center">
-            <th scope="col">KİTAP ADI</th>
-            <th scope="col">YAZARI</th>
-            <th scope="col">KATEGORİSİ</th>
-            <th scope="col">ISBN</th>
-            <th className="text-center" scope="col">
-              İŞLEM
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {books.map((book) => {
-            const category = categories.find(
-              (cat) => cat.id === book.categoryId
-            );
-            return (
-              <tr className="table-primary text-center">
-                <td>{book.name}</td>
-                <td>{book.author}</td>
-                <td>{category.name}</td>
-                <td>{book.ısbn}</td>
-                <td>
-                  <div
-                    className="btn-group"
-                    role="group"
-                    aria-label="Basic example"
-                  >
-                    <button type="button" className="btn btn-success rounded-3">
-                      Okundu
-                    </button>
-                    <button
-                      type="button"
-                      className=" mx-2 btn btn-primary rounded-3"
+          <tbody>
+            {books.map((book) => {
+              const category = categories.find(
+                (cat) => cat.id === book.categoryId
+              );
+              return (
+                <tr className="table-primary text-center">
+                  <td>{book.name}</td>
+                  <td>{book.author}</td>
+                  <td>{category.name}</td>
+                  <td>{book.ısbn}</td>
+                  <td>
+                    <div
+                      className="btn-group"
+                      role="group"
+                      aria-label="Basic example"
                     >
-                      Düzelt
-                    </button>
-                    <button
-                      type="button"
-                      className="btn btn-danger rounded-3 px-4"
-                      onClick={() => deleteBook(book.id)}
-                    >
-                      Sil
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                      <button
+                        type="button"
+                        className="btn btn-success rounded-3"
+                      >
+                        Okundu
+                      </button>
+                      <Link
+                        to={`edit-book/${book.id}`}
+                        type="button"
+                        className=" mx-2 btn btn-primary rounded-3"
+                      >
+                        Düzelt
+                      </Link>
+                      <button
+                        type="button"
+                        className="btn btn-danger rounded-3 px-4"
+                        onClick={() => deleteBook(book.id)}
+                      >
+                        Sil
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
 
     /*

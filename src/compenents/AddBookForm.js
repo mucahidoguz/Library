@@ -4,7 +4,8 @@ import Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
 
 const AddBookForm = (props) => {
-  const navigate = useNavigate;
+  //yeni kitap eklendiğinde ana safyaya yönlendirme navigate//
+  const navigate = useNavigate();
   const [categories, setCategories] = useState(null);
   const [bookname, SetBookname] = useState(null);
   const [author, setAuthor] = useState(null);
@@ -101,10 +102,22 @@ const AddBookForm = (props) => {
             </select>
           </div>
         </div>
-        <div className="d-flex justify-content-center">
-          <button type="submit" className="btn btn-primary">
-            Kaydet
-          </button>
+        <div className="d-flex justify-content-end">
+        <button
+              id="saveDelete"
+              onClick={() => navigate("/")}
+              type="submit"
+              className="btn btn-danger mx-2"
+            >
+              Vazgeç
+            </button>
+            <button
+              id="saveDelete"
+              type="submit"
+              className="btn btn-success mx-"
+            >
+              Kaydet
+            </button>
         </div>
       </form>
     </div>

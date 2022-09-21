@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = (props) => {
   return (
-    <footer className="footer navbar-expand-lg">
+    <footer id="footer" className="footer navbar-expand-lg">
       <div className="container-fluid">
         <div className="FooterSignature">
           <span className="name"> Mücahid OĞUZ</span>

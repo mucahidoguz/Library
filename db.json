@@ -4,15 +4,15 @@
       "id": 1,
       "name": "Yaban",
       "author": "Yakup Kadri KARAOSMANOĞLU",
-      "isbn": "11111111111",
-      "categoryId": "1"
+      "categoryId": "1",
+      "isbn": "11111111111"
     },
     {
       "id": 2,
       "name": "Sefiller",
       "author": "Victor HUGO",
-      "isbn": "11111111112",
-      "categoryId": "1"
+      "categoryId": "1",
+      "isbn": "11111111112"
     },
     {
       "id": 2,
@@ -22,18 +22,46 @@
       "categoryId": "3"
     },
     {
-      "id": 1663337198032,
-      "name": "Safahat",
-      "author": "M.Akif ERSOY",
-      "isbn": "12121",
-      "categoryId": "5"
-    },
-    {
       "id": 1663337258392,
       "name": "Kur'an-ı Kerim",
       "author": "Hayrat Neşriyat",
       "isbn": null,
       "categoryId": "4"
+    },
+    {
+      "id": 1663681239254,
+      "name": "Safahat",
+      "author": "Mehmet Akif ERSOY",
+      "isbn": null,
+      "categoryId": "5"
+    },
+    {
+      "id": 1663681390131,
+      "name": "Nadal - Benim Hikayem",
+      "author": "Rafeal NADAL",
+      "isbn": null,
+      "categoryId": "6"
+    },
+    {
+      "id": 1663681416842,
+      "name": "Çile",
+      "author": "Necip Fazıl KISAKÜREK",
+      "isbn": null,
+      "categoryId": "5"
+    },
+    {
+      "id": 1663682207167,
+      "name": "Kaşağı",
+      "author": "Ömer SEYFETTİN",
+      "isbn": null,
+      "categoryId": "2"
+    },
+    {
+      "id": 1663751851585,
+      "name": "Suç ve Ceza",
+      "author": "Dosdoyevski",
+      "isbn": null,
+      "categoryId": "1"
     }
   ],
   "categories": [
@@ -56,6 +84,10 @@
     {
       "id": "5",
       "name": "Şiir"
+    },
+    {
+      "id": "6",
+      "name": "Biyografi"
     }
   ]
 }
