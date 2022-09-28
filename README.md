@@ -31,6 +31,6 @@ AXIOS Kütüphanesi kullanılmıştır.
 
 <h2> gif eklendi </h2>
 
-![](./src/assets/project.gif)
+![](./src/assets/Project.gif)
 
 # Proje Tamamlanarak Kullanıma Hazır Hale Getirilmiştir.
