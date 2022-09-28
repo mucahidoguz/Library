@@ -53,10 +53,8 @@ const AddBookForm = (props) => {
   }
 
   return (
-    <div className=" container my-5">
-      <h3 classNameName="baslik">
-        Lütfen Eklenecek Kitaba Ait Bilgileri Giriniz.
-      </h3>
+    <div className=" containerAddBook my-5">
+      <h3 className="baslik">Lütfen Eklenecek Kitaba Ait Bilgileri Giriniz.</h3>
       <form onSubmit={handleSubmit} className="mx-5">
         <div className="row mt-5">
           <div className="col">
@@ -90,34 +88,34 @@ const AddBookForm = (props) => {
           </div>
           <div className="col">
             <select
-              class="form-select"
+              className="form-select"
               onChange={(event) => setCategory(event.target.value)}
             >
               <option value={""} selected>
                 Lütfen Kategori Seçiniz
               </option>
               {categories.map((cat) => {
-                return <option value={cat.id}>{cat.name}</option>;
+                return (
+                  <option key={cat.id} value={cat.id}>
+                    {cat.name}
+                  </option>
+                );
               })}
             </select>
           </div>
         </div>
         <div className="d-flex justify-content-end">
-        <button
-              id="saveDelete"
-              onClick={() => navigate("/")}
-              type="submit"
-              className="btn btn-danger mx-2"
-            >
-              Vazgeç
-            </button>
-            <button
-              id="saveDelete"
-              type="submit"
-              className="btn btn-success mx-"
-            >
-              Kaydet
-            </button>
+          <button
+            id="saveDelete"
+            onClick={() => navigate("/")}
+            type="submit"
+            className="btn btn-danger mx-2"
+          >
+            Vazgeç
+          </button>
+          <button id="saveDelete" type="submit" className="btn btn-success mx-">
+            Kaydet
+          </button>
         </div>
       </form>
     </div>

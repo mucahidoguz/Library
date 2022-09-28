@@ -8,7 +8,7 @@ const Home = (props) => {
     <div className="App">
       <Header />
       <ListBooks />
-      <Footer />
+      <Footer/>
     </div>
   );
 };

@@ -3,8 +3,16 @@
 }
 
 .container {
-  height: 590px;
+  height: 575px;
+}
 
+.containerAddBook {
+  height: 530px;
+
+}
+
+.containerEditBook {
+  height: 530px;
 }
 
 .navbar {
@@ -31,22 +39,45 @@
   font-family: 'Alfa Slab One', cursive;
 }
 
+.baslik{
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: xx-large;
+}
 .btn {
   color: white;
 }
 
-#tableScroll{
-max-height: 580px;
-overflow-y: auto;
-border: 2px solid;
-border-radius: 5px;
+.btnn{
+height: 40px;
+width: 80px;
+margin: 0px 3px;
+padding: 5px 0px;
+
+}
+
+.titleClass{
+padding-bottom: 15px;
+font-family:sans-serif;
+font-size: 40px;
+color: blue;
+
+}
+
+#tableScroll {
+  max-height: 610px;
+  overflow-y: auto;
+  border: 2px solid;
+  border-radius: 5px;
 }
 
 .Loader {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25%;
+  margin-top: 280px;
+  margin-bottom: 300px;
+  flex-direction: column;
 }
 
 .Loading {
@@ -60,11 +91,21 @@ border-radius: 5px;
 
 h3 {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
 }
 
-footer {
+.tick {
+  width: 40px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ftr {
+  margin-top: 20px;
+
+}
+
+#footer {
+  margin-top: 110px;
   background-image: url(./assets/book1.jpg);
   height: 130px;
   max-width: 100%;

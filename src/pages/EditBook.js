@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../compenents/Footer";
 import Header from "../compenents/Header";
 import Loading from "../compenents/Loading";
+import Modal from "../compenents/Modal";
 
 const EditBook = (props) => {
   const params = useParams();
@@ -15,6 +16,7 @@ const EditBook = (props) => {
   const [isbn, setIsbn] = useState("");
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
@@ -37,6 +39,10 @@ const EditBook = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setShowModal(true);
+  };
+
+  const editBook = () => {
     if (bookname === "" || author === "" || category === "") {
       alert("Kitap Adı, Yazarı ve Kategori boş bırakılamaz");
       return;
@@ -53,6 +59,7 @@ const EditBook = (props) => {
       .put(`http://localhost:3004/books/${params.bookId}`, updatedBook)
       .then((res) => {
         console.log(res);
+        setShowModal(false);
         navigate("/");
       })
       .catch((err) => console.log("edit error", err));
@@ -65,9 +72,9 @@ const EditBook = (props) => {
   return (
     <div>
       <Header />;
-      <div className=" container my-4">
-        <h3 classNameName="baslik">
-          Lütfen Eklenecek Kitaba Ait Bilgileri Giriniz.
+      <div className=" containerEditBook my-4">
+        <h3 className="baslik">
+          Lütfen Güncellenecek Kitaba Ait Bilgileri Giriniz.
         </h3>
         <form onSubmit={handleSubmit} className="mx-5">
           <div className="row mt-5">
@@ -123,16 +130,20 @@ const EditBook = (props) => {
             >
               Vazgeç
             </button>
-            <button
-              id="saveDelete"
-              type="submit"
-              className="btn btn-success mx-"
-            >
+            <button id="saveDelete" type="submit" className="btn btn-success">
               Kaydet
             </button>
           </div>
         </form>
       </div>
+      {showModal === true && (
+        <Modal
+          aciklama="Kitabı Güncellemek İstediğinize Emin Misiniz ?"
+          title={`${bookname}`}
+          onCancel={() => setShowModal(false)}
+          onConfirm={() => editBook()}
+        />
+      )}
       <Footer />
     </div>
   );

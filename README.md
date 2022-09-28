@@ -4,25 +4,28 @@ Kitap ekleme, silme ve okundu olarak işaretle yapılacak şekilde bir kitaplık
 
 ## Kullanılan İçerikler
 
-HTML, CSS, JS, React
+HTML, CSS, JS, React, AXIOS, Boostrap
 
 ### Proje Özeti
 
-JSON Server üzerinden bir backend veritabanı oluşturularak gerçek bir veritabanı ile çalışma ortamı sağlanmıştır.
+JSON Server üzerinden FAKE API backend veritabanı oluşturularak gerçek bir veritabanı ile çalışma ortamı sağlanmıştır.
 
 COMPONENTS klasörü oluşturulak içerisine
 Header
 Footer
 Kitap Listesi
 Kitap Ekleme
+Loading
+Modal
 bölümleri yapılarak projeye entegre edilmiştir.
 
 PAGES klasörü oluşturularak içerisine
-Kitap Ekleme
 Ana Sayfa
-gibi sayfalar oluşturularak projeye entegre edilmiştir.
+Kitap Ekleme
+Kitap Düzenleme
+sayfaları oluşturularak projeye entegre edilmiştir.
 
-CSS olarak BOOSTRAP kütüphanesi kullanımıştır. Ayrıca bazı bölümler için de harici bir CSS STYLE dosyası kullanılmıştır.
+CSS olarak BOOSTRAP kütüphanesi kullanımıştır. Ayrıca bazı bölümler için de harici bir STYLE dosyası oluşturularak CSS yazımı kullanılmıştır.
 
 AXIOS Kütüphanesi kullanılmıştır.
 
@@ -30,5 +33,4 @@ AXIOS Kütüphanesi kullanılmıştır.
 
 ![](./src/assets/project.gif)
 
-
-## Proje geliştirmeleri devam etmektedir...
+# Proje Tamamlanarak Kullanıma Hazır Hale Getirilmiştir.

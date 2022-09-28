@@ -25,43 +25,50 @@
       "id": 1663337258392,
       "name": "Kur'an-ı Kerim",
       "author": "Hayrat Neşriyat",
-      "isbn": null,
-      "categoryId": "4"
+      "categoryId": "4",
+      "isbn": "11111111114"
     },
     {
       "id": 1663681239254,
       "name": "Safahat",
       "author": "Mehmet Akif ERSOY",
-      "isbn": null,
-      "categoryId": "5"
+      "categoryId": "5",
+      "isbn": "11111111115"
     },
     {
       "id": 1663681390131,
       "name": "Nadal - Benim Hikayem",
       "author": "Rafeal NADAL",
-      "isbn": null,
-      "categoryId": "6"
+      "categoryId": "6",
+      "isbn": "11111111116"
     },
     {
       "id": 1663681416842,
       "name": "Çile",
       "author": "Necip Fazıl KISAKÜREK",
-      "isbn": null,
-      "categoryId": "5"
+      "categoryId": "5",
+      "isbn": "11111111117"
     },
     {
       "id": 1663682207167,
       "name": "Kaşağı",
       "author": "Ömer SEYFETTİN",
-      "isbn": null,
-      "categoryId": "2"
+      "categoryId": "2",
+      "isbn": "11111111118"
     },
     {
       "id": 1663751851585,
       "name": "Suç ve Ceza",
-      "author": "Dosdoyevski",
-      "isbn": null,
-      "categoryId": "1"
+      "author": "Fyodor DOSTOYEVSKI",
+      "categoryId": "1",
+      "isbn": "11111111119"
+    },
+    {
+      "id": 1663758251631,
+      "name": "Riyazü's Salihin",
+      "author": "İmam NEVEVİ",
+      "categoryId": "4",
+      "isbn": "11111111121"
     }
   ],
   "categories": [

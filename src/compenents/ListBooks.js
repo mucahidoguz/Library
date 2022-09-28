@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
 
 const ListBooks = (props) => {
   const [books, setBooks] = useState(null);
   const [categories, setCategories] = useState(null);
   const [didUpdate, setDidUpdate] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [silinecekKitap, setSilinecekKitap] = useState(false);
+  const [silinecekKitapIsmi, setSilinecekKitapIsmi] = useState("");
   useEffect(() => {
     axios
       .get("http://localhost:3004/books")
@@ -32,6 +36,7 @@ const ListBooks = (props) => {
       .then((res) => {
         console.log(res);
         setDidUpdate(!didUpdate);
+        setShowModal(false);
       })
       .catch((err) => console.log(err));
   };
@@ -48,7 +53,7 @@ const ListBooks = (props) => {
           Kitap Ekle
         </Link>
       </div>
-      <div id="tableScroll" >
+      <div id="tableScroll">
         <table className="table table-striped">
           <thead>
             <tr className="table-success text-center">
@@ -59,6 +64,7 @@ const ListBooks = (props) => {
               <th className="text-center" scope="col">
                 İŞLEM
               </th>
+              <th scope="col">OKUNDU</th>
             </tr>
           </thead>
 
@@ -68,44 +74,55 @@ const ListBooks = (props) => {
                 (cat) => cat.id === book.categoryId
               );
               return (
-                <tr className="table-primary text-center">
+                <tr key={book.id} className="table-primary text-center">
                   <td>{book.name}</td>
                   <td>{book.author}</td>
                   <td>{category.name}</td>
-                  <td>{book.ısbn}</td>
+                  <td>{book.isbn}</td>
                   <td>
-                    <div
-                      className="btn-group"
-                      role="group"
-                      aria-label="Basic example"
-                    >
-                      <button
-                        type="button"
-                        className="btn btn-success rounded-3"
-                      >
-                        Okundu
-                      </button>
+                    <div className="d-flex" aria-label="Basic example">
                       <Link
                         to={`edit-book/${book.id}`}
                         type="button"
-                        className=" mx-2 btn btn-primary rounded-3"
+                        className="btnn btn btn-primary rounded-3 "
                       >
                         Düzelt
                       </Link>
                       <button
                         type="button"
-                        className="btn btn-danger rounded-3 px-4"
-                        onClick={() => deleteBook(book.id)}
+                        className="btnn btn btn-danger rounded-3"
+                        onClick={() => {
+                          setShowModal(true);
+                          /*deleteBook(book.id)*/
+                          setSilinecekKitap(book.id);
+                          setSilinecekKitapIsmi(book.name);
+                        }}
                       >
+                        {" "}
                         Sil
                       </button>
                     </div>
+                  </td>
+                  <td className="table-primary ">
+                    <input
+                      className="tick form-check"
+                      type="checkbox"
+                      value=""
+                    />
                   </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        {showModal === true && (
+          <Modal
+          aciklama= "Silmek İstediğinize Emin Misiniz?"
+            title={silinecekKitapIsmi}
+            onConfirm={() => deleteBook(silinecekKitap)}
+            onCancel={() => setShowModal(false)}
+          />
+        )}
       </div>
     </div>
 
