@@ -69,32 +69,47 @@
       "author": "İmam NEVEVİ",
       "categoryId": "4",
       "isbn": "11111111121"
+    },
+    {
+      "id": 1665578434239,
+      "name": "Bir Delikanlının Hikayesi",
+      "author": "Sebahattin ALİ",
+      "categoryId": "1665568016701",
+      "isbn": "2121212121212"
     }
   ],
   "categories": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Roman"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Hikaye"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Deneme"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Dini Kitaplar"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Şiir"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Biyografi"
+    },
+    {
+      "id": 1665568016701,
+      "name": "Otobiyografi"
+    },
+    {
+      "id": 1665578870453,
+      "name": "Masal"
     }
   ]
 }

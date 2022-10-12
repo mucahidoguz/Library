@@ -15,6 +15,10 @@
   height: 530px;
 }
 
+.containerCategory {
+  height: 530px;
+}
+
 .navbar {
   background-image: url(./assets/book3.jpg);
   height: 130px;
@@ -27,7 +31,7 @@
 
 .navbar-brand {
   font-family: 'Alfa Slab One', cursive;
-  color: red;
+  color: green;
   font-size: xx-large;
   font: bold;
   font-size: 50px;
@@ -37,31 +41,40 @@
   font: bold;
   font-size: x-large;
   font-family: 'Alfa Slab One', cursive;
+  color: red;
+  margin-top: 25px;
 }
 
-.baslik{
-text-align: center;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size: xx-large;
+.homeNavbar2 {
+  font: bold;
+  font-size: x-large;
+  font-family: 'Alfa Slab One', cursive;
+  color: red;
+  margin-top: 25px;
 }
+
+.baslik {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+}
+
 .btn {
   color: white;
 }
 
-.btnn{
-height: 40px;
-width: 80px;
-margin: 0px 3px;
-padding: 5px 0px;
-
+.btnn {
+  height: 40px;
+  width: 80px;
+  margin: 0px 3px;
+  padding: 5px 0px;
 }
 
-.titleClass{
-padding-bottom: 15px;
-font-family:sans-serif;
-font-size: 40px;
-color: blue;
-
+.titleClass {
+  padding-bottom: 15px;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: blue;
 }
 
 #tableScroll {
@@ -69,6 +82,15 @@ color: blue;
   overflow-y: auto;
   border: 2px solid;
   border-radius: 5px;
+}
+
+#tableScrollCategory {
+  max-height: 610px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 2px;
+  max-width: 50%;
+  margin-left: 25%;
 }
 
 .Loader {
@@ -120,12 +142,10 @@ h3 {
 .FooterSignature {
   margin-top: 15px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 #saveDelete {
   width: 200px;
-
 }
 
 .name {

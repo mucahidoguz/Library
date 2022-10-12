@@ -2,16 +2,23 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const AddBookForm = (props) => {
   //yeni kitap eklendiğinde ana safyaya yönlendirme navigate//
   const navigate = useNavigate();
-  const [categories, setCategories] = useState(null);
+
+  //redux değişkenleri
+  const { categoriesState } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  // const [categories, setCategories] = useState(null);
   const [bookname, SetBookname] = useState(null);
   const [author, setAuthor] = useState(null);
   const [isbn, setIsbn] = useState(null);
   const [category, setCategory] = useState(null);
 
+  /*
   useEffect(() => {
     axios
       .get("  http://localhost:3004/categories")
@@ -21,6 +28,7 @@ const AddBookForm = (props) => {
       })
       .catch((err) => console.log(err));
   }, []);
+  */
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -39,6 +47,7 @@ const AddBookForm = (props) => {
       .post("http://localhost:3004/books", newBook)
       .then((res) => {
         console.log("kitap ekle res", res);
+        dispatch({type:"ADD_BOOK", payload: newBook})
         SetBookname("");
         setAuthor("");
         setIsbn("");
@@ -48,7 +57,7 @@ const AddBookForm = (props) => {
       .catch((err) => console.log(err));
   };
 
-  if (categories === null) {
+  if (categoriesState.success !== true) {
     return <Loading />;
   }
 
@@ -94,7 +103,7 @@ const AddBookForm = (props) => {
               <option value={""} selected>
                 Lütfen Kategori Seçiniz
               </option>
-              {categories.map((cat) => {
+              {categoriesState.categories.map((cat) => {
                 return (
                   <option key={cat.id} value={cat.id}>
                     {cat.name}

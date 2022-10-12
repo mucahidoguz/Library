@@ -25,6 +25,8 @@ Kitap Ekleme
 Kitap Düzenleme
 sayfaları oluşturularak projeye entegre edilmiştir.
 
+REDUX kütüphanesi kullanılmıştır.
+
 CSS olarak BOOSTRAP kütüphanesi kullanımıştır. Ayrıca bazı bölümler için de harici bir STYLE dosyası oluşturularak CSS yazımı kullanılmıştır.
 
 AXIOS Kütüphanesi kullanılmıştır.

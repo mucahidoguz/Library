@@ -1,13 +1,18 @@
-import React from "react";
-import Header from "../compenents/Header";
+import React, {useEffect} from "react";
+import HeaderModul from "../compenents/HeaderModul";
 import "../App.css";
 import AddBookForm from "../compenents/AddBookForm";
 import Footer from "../compenents/Footer";
 
+
 const AddBook = (props) => {
+useEffect(()=>{
+ document.title="Library - Add Book"
+},[])
+
   return (
     <div>
-      <Header />
+      <HeaderModul />
       <AddBookForm />
       <Footer />
     </div>

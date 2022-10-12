@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-const Header = (props) => {
+const HeaderModul = (props) => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -41,24 +40,10 @@ const Header = (props) => {
               </Link>
             </li>
           </ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Sitede Ara"
-              aria-label="Search"
-            />
-            <button
-              className="btn btn-primary color-black btn-outline-success"
-              type="submit"
-            >
-              Arama
-            </button>
-          </form>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Header;
+export default HeaderModul;
