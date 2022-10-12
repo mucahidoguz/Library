@@ -15,6 +15,8 @@ Header
 Footer
 Kitap Listesi
 Kitap Ekleme
+Kategori Listesi
+Kategori Ekleme
 Loading
 Modal
 bölümleri yapılarak projeye entegre edilmiştir.
@@ -23,9 +25,11 @@ PAGES klasörü oluşturularak içerisine
 Ana Sayfa
 Kitap Ekleme
 Kitap Düzenleme
+Kategori Ekleme
+Kategori Düzenleme
 sayfaları oluşturularak projeye entegre edilmiştir.
 
-REDUX kütüphanesi kullanılmıştır.
+REDUX kütüphanesi kullanılarak Reducer larla proje daha kullanışlı hale getirilmiştir.
 
 CSS olarak BOOSTRAP kütüphanesi kullanımıştır. Ayrıca bazı bölümler için de harici bir STYLE dosyası oluşturularak CSS yazımı kullanılmıştır.
 
